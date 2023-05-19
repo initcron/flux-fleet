@@ -1,9 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - ../base/facebooc
-  - ../base/instavote
-patchesStrategicMerge:
-  - facebooc-deploy-kustomization.yaml
-  - instavote-deploy-kustomization.yaml
-
+- ../base/facebooc
+- ../base/instavote
+patches:
+- path: facebooc-deploy-kustomization.yaml
+- path: instavote-deploy-kustomization.yaml
