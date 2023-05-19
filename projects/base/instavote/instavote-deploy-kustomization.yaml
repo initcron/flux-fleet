@@ -9,6 +9,7 @@ spec:
   path: ./flux
   prune: false
   serviceAccountName: instavote
+  targetNamespace: instavote
   sourceRef:
     kind: GitRepository
     name: instavote-deploy
