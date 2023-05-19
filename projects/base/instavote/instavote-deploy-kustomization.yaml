@@ -1,0 +1,14 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: instavote-deploy
+  namespace: instavote
+spec:
+  interval: 1m0s
+  path: ./flux
+  prune: false
+  serviceAccountName: instavote
+  sourceRef:
+    kind: GitRepository
+    name: instavote-deploy
