@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flagger
+spec:
+  template:
+    spec:
+      containers:
+        - name: flagger
+          args:
+            - -log-level=info
+            - -mesh-provider=nginx
+            - -metrics-server=http://flagger-prometheus:9090

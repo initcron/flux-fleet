@@ -1,0 +1,8 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- namespace.yaml
+- github.com/fluxcd/flagger/kustomize/base/flagger
+- github.com/fluxcd/flagger/kustomize/base/prometheus
+- github.com/fluxcd/flagger/kustomize/tester
+
